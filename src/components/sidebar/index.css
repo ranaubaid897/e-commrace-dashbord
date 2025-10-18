@@ -1,0 +1,59 @@
+.sidebar {
+  position: fixed;
+  top: 98px; /* Start below header */
+  left: 0;
+  width: 20%;
+  height: calc(100vh - 98px);
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar inner links & buttons */
+.sidebar-btn {
+  width: 100%;
+  justify-content: flex-start !important;
+  color: #333 !important;
+  padding: 12px 20px !important;
+  text-align: left !important;
+  border-radius: 0 !important;
+  font-size: 17px !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover and active states */
+.sidebar-btn:hover {
+  background-color: #e9ecef !important;
+  color: green !important;
+}
+
+/* Submenu styling */
+.submenu {
+  background-color: #f1f3f5;
+  border-left: 3px solid green;
+  transition: max-height 0.4s ease;
+}
+
+.submenu button {
+  font-size: 15px !important;
+  color: #555 !important;
+  padding-left: 40px !important;
+  text-transform: none !important;
+}
+
+.submenu button:hover {
+  color: green !important;
+}
+
+/* Scrollbar style */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+

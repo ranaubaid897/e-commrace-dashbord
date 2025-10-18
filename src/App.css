@@ -1,0 +1,78 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(226, 225, 225) !important;
+}
+
+/* === MAIN LAYOUT === */
+.main {
+  display: flex;
+  margin-top: 98px; /* below fixed header */
+  transition: all 0.3s ease;
+}
+
+.main.d-flex.changes{
+  margin-top: 0;
+
+}
+
+
+.main .sidebar-wrap.changes {
+  display: none;
+}
+
+/* === SIDEBAR === */
+.sidebar-wrap {
+  width: 20%;
+  /* height: calc(100vh - 98px); */
+  overflow-y: auto;
+  /* background-color: #fff; */
+  transition: all 0.3s ease;
+}
+
+/* When hidden (collapsed) */
+.sidebar-wrap.toggle {
+  width: 0;
+  overflow: hidden;
+}
+
+/* Optional: hide internal menu elements when collapsed */
+.sidebar-wrap.toggle .sidebarMenu {
+  display: none;
+}
+
+/* === CONTENT AREA === */
+.content-write {
+  width: 80%;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* When sidebar hidden */
+.content-write.toggle {
+  width: 100%;
+  margin-left: 0;
+}
+
+/* === Scrollbar style === */
+.sidebar-wrap::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-wrap::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+.sidebar-wrap::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.container-fluid.head.changes {
+  display: none;
+}
+

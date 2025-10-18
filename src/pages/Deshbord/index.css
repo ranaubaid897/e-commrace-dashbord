@@ -1,0 +1,84 @@
+.product-text {
+  width: 250px; /* adjust as needed */
+}
+
+/* Limit the <h6> to one line */
+.title {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Limit the <span> to one line */
+.description {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+  font-size: 14px;
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 70px; /* adjust as needed */
+  aspect-ratio: 1 / 1; /* keeps it perfectly square on all devices */
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0; /* prevents image div from shrinking */
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills the box without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.responsive-image:hover {
+  transform: scale(1.05);
+}
+
+/* Make sure parent layout adjusts on small screens */
+@media (max-width: 768px) {
+  .image-wrapper {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    max-width: 100px;
+  }
+}
+
+.change {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  background-color: blue !important;
+} 
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #007bff;
+  color: white;
+  z-index: 2;
+}
